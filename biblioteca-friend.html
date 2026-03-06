@@ -659,9 +659,9 @@
 </div>
 
 <div class="tabs">
-  <div class="tab active" onclick="switchTab('library')">📚 Library</div>
-  <div class="tab" onclick="switchTab('shelf')">🪵 Shelf</div>
-  <div class="tab" onclick="switchTab('couples')">💕 Couples</div>
+  <div class="tab active" onclick="switchTab('library')">📚 Biblioteca</div>
+  <div class="tab" onclick="switchTab('shelf')">🪵 Estante</div>
+  <div class="tab" onclick="switchTab('couples')">💕 Parejas</div>
   <div class="tab" onclick="switchTab('wrapped')">✨ Wrapped</div>
 </div>
 
@@ -671,7 +671,7 @@
     <div class="filter-chip active" onclick="filterBooks('all', this)">All</div>
     <div class="filter-chip" onclick="filterBooks('5', this)">⭐ 5 Stars</div>
     <div class="filter-chip" onclick="filterBooks('spicy5', this)">🔥🔥🔥 Max Spice</div>
-    <div class="filter-chip" onclick="filterBooks('4', this)">4+ Stars</div>
+    <div class="filter-chip" onclick="filterBooks('4', this)">4+ Estrellas</div>
     <div class="filter-chip" onclick="filterBooks('enemies', this)">Enemies to Lovers</div>
     <div class="filter-chip" onclick="filterBooks('second-chance', this)">Segunda Oportunidad</div>
     <div class="filter-chip" onclick="filterBooks('fake', this)">Falso Noviazgo</div>
@@ -682,8 +682,8 @@
   <div class="book-grid" id="bookGrid"></div>
   <div class="empty-state" id="emptyState">
     <div class="empty-icon">📚</div>
-    <div class="empty-title">Your shelf awaits</div>
-    <div class="empty-sub">Tap <strong>+</strong> to log your first book of the year.</div>
+    <div class="empty-title">¡Tu biblioteca te espera!</div>
+    <div class="empty-sub">Toca <strong>+</strong> para registrar tu primer libro del año.</div>
   </div>
   <div class="bottom-safe"></div>
 </div>
@@ -691,19 +691,19 @@
 <!-- SHELF TAB -->
 <div class="section" id="tab-shelf">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--deep)">My Bookshelf</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--deep)">Mi Estante</div>
     <div style="display:flex;align-items:center;gap:8px">
       <button onclick="changeShelfYear(-1)" style="background:var(--border);border:none;border-radius:50%;width:28px;height:28px;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;touch-action:manipulation">‹</button>
       <div id="shelfYear" style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--deep);min-width:44px;text-align:center">2026</div>
       <button onclick="changeShelfYear(1)" style="background:var(--border);border:none;border-radius:50%;width:28px;height:28px;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;touch-action:manipulation">›</button>
     </div>
   </div>
-  <div style="font-size:11px;color:var(--muted);text-align:right;margin-top:-10px;margin-bottom:12px">tap a spine to peek</div>
+  <div style="font-size:11px;color:var(--muted);text-align:right;margin-top:-10px;margin-bottom:12px">toca un lomo para ver</div>
   <div id="shelfContent"></div>
   <div class="empty-state" id="emptyShelf" style="display:none">
     <div class="empty-icon">🪵</div>
-    <div class="empty-title">Empty shelves</div>
-    <div class="empty-sub">Your books will appear here as beautiful spines once you log them.</div>
+    <div class="empty-title">Estantes vacíos</div>
+    <div class="empty-sub">Tus libros aparecerán aquí como lomos una vez que los registres.</div>
   </div>
   <div class="bottom-safe"></div>
 </div>
@@ -711,17 +711,17 @@
 <!-- COUPLES TAB -->
 <div class="section" id="tab-couples">
   <div class="couple-type-tabs">
-    <div class="couple-tab active" onclick="filterCouples('all', this)">All 💕</div>
+    <div class="couple-tab active" onclick="filterCouples('all', this)">Todas 💕</div>
     <div class="couple-tab" onclick="filterCouples('mm', this)">H/H</div>
     <div class="couple-tab" onclick="filterCouples('ff', this)">M/M</div>
     <div class="couple-tab" onclick="filterCouples('mf', this)">H/M</div>
     <div class="couple-tab" onclick="filterCouples('other', this)">Otro</div>
   </div>
   <div id="couplesList"></div>
-  <div class="empty-state" id="emptyCouples" style="display:none">
+  <div class="empty-state" id="emptyCouples">
     <div class="empty-icon">💕</div>
-    <div class="empty-title">No couples yet</div>
-    <div class="empty-sub">Add books with couple names to see them here.</div>
+    <div class="empty-title">Sin parejas todavía</div>
+    <div class="empty-sub">Agrega libros con nombres de pareja para verlos aquí.</div>
   </div>
   <div class="bottom-safe"></div>
 </div>
@@ -731,7 +731,7 @@
 
   <!-- Year selector -->
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--deep)">Reading Stats</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--deep)">Estadísticas de lectura</div>
     <div style="display:flex;align-items:center;gap:8px">
       <button onclick="changeYear(-1)" style="background:var(--border);border:none;border-radius:50%;width:28px;height:28px;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center">‹</button>
       <div id="wrappedYear" style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--deep);min-width:44px;text-align:center">2026</div>
@@ -745,7 +745,7 @@
     <div style="display:flex;align-items:flex-end;gap:24px;margin-top:4px">
       <div>
         <div class="wrapped-count" id="wrappedCount">0</div>
-        <div class="wrapped-sub">📚 books</div>
+        <div class="wrapped-sub">📚 libros</div>
       </div>
       <div>
         <div class="wrapped-count" id="wrappedFanficCount" style="font-size:36px">0</div>
@@ -757,12 +757,12 @@
   <!-- Reading goal -->
   <div class="trope-chart" style="margin-bottom:16px">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-      <div class="trope-chart-title" style="margin-bottom:0">Reading Goal</div>
+      <div class="trope-chart-title" style="margin-bottom:0">Meta de lectura</div>
       <div style="display:flex;align-items:center;gap:8px">
         <input id="goalInput" type="number" min="1" max="999"
           style="width:56px;padding:5px 8px;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;text-align:center;outline:none;color:var(--deep)"
           placeholder="—" onchange="saveGoal()" />
-        <span style="font-size:12px;color:var(--muted)">books</span>
+        <span style="font-size:12px;color:var(--muted)">libros</span>
       </div>
     </div>
     <div id="goalBarWrap" style="display:none">
@@ -774,34 +774,34 @@
         <div id="goalBar" style="height:100%;background:linear-gradient(90deg,var(--plum),var(--rose));border-radius:6px;transition:width 0.6s ease;width:0%"></div>
       </div>
     </div>
-    <div id="goalEmpty" style="font-size:12px;color:var(--muted);font-style:italic">Set a goal to track your progress!</div>
+    <div id="goalEmpty" style="font-size:12px;color:var(--muted);font-style:italic">¡Establece una meta para seguir tu progreso!</div>
   </div>
 
   <div class="stat-cards">
     <div class="stat-card">
       <div class="stat-card-icon">⭐</div>
       <div class="stat-card-val" id="wrappedAvg">—</div>
-      <div class="stat-card-label">Avg rating</div>
+      <div class="stat-card-label">Calificación promedio</div>
     </div>
     <div class="stat-card">
       <div class="stat-card-icon">🔥</div>
       <div class="stat-card-val" id="wrappedSpicy">—</div>
-      <div class="stat-card-label">Avg spice level</div>
+      <div class="stat-card-label">Nivel de Spice promedio</div>
     </div>
     <div class="stat-card">
       <div class="stat-card-icon">💕</div>
       <div class="stat-card-val" id="wrappedCouples">0</div>
-      <div class="stat-card-label">Ships logged</div>
+      <div class="stat-card-label">Parejas registradas</div>
     </div>
     <div class="stat-card">
       <div class="stat-card-icon">🎭</div>
       <div class="stat-card-val" id="wrappedGenres">0</div>
-      <div class="stat-card-label">Genres read</div>
+      <div class="stat-card-label">Géneros leídos</div>
     </div>
   </div>
   <div class="trope-chart" id="tropeChart">
-    <div class="trope-chart-title">Trope Breakdown</div>
-    <div id="tropeChartBars"><div style="font-size:13px;color:var(--muted);text-align:center;padding:16px 0;">Add books to see your trope stats!</div></div>
+    <div class="trope-chart-title">Tropos favoritos</div>
+    <div id="tropeChartBars"><div style="font-size:13px;color:var(--muted);text-align:center;padding:16px 0;">Add libros to see your trope stats!</div></div>
   </div>
   <div class="bottom-safe"></div>
 </div>
@@ -1226,7 +1226,7 @@ const HUMOR_LABELS = ['','Apenas una sonrisa 😐','Algunas risitas 😄','Realm
 const FLUFF_LABELS = ['','Apenas un poco 🩷','Tierno y dulce 🩷','Muy tierno 🩷','Empalagosamente adorable 🩷','Sobrecarga de ternura 🩷🩷'];
 const TEAR_LABELS = ['','Un poco triste 😕','Got a bit teary 😢','Cried a little 😭','Full on crying 💧','Me destrozó el corazón 💔'];
 
-let books = [];
+let libros = [];
 let currentRating = 0;
 let currentSpicy = 0;
 let selectedTropes = [];
@@ -1247,18 +1247,18 @@ async function loadBooks() {
   try {
     const val = localStorage.getItem('mi-biblioteca-libros-v2');
     if (val) {
-      books = JSON.parse(val);
+      libros = JSON.parse(val);
     } else {
       // Try the auto-backup copy if main key is missing
       const bak = localStorage.getItem('mi-biblioteca-libros-bak');
       if (bak) {
         const parsed = JSON.parse(bak);
-        books = parsed.books || parsed;
+        libros = parsed.books || parsed;
         // Restore to main key
         localStorage.setItem('mi-biblioteca-libros-v2', JSON.stringify(books));
       }
     }
-  } catch(e) { books = []; }
+  } catch(e) { libros = []; }
   renderAll();
 }
 
@@ -1271,7 +1271,7 @@ async function saveBooks() {
 function autoBackupToFile() {
   // Silently save a backup JSON to the device — user just taps "Save" in the share sheet
   try {
-    const data = { books, exportedAt: new Date().toISOString(), version: 'mi-biblioteca-libros-v2' };
+    const data = { libros, exportedAt: new Date().toISOString(), version: 'mi-biblioteca-libros-v2' };
     const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -1294,23 +1294,23 @@ function renderAll() {
 
 function updateStats() {
   const yr = new Date().getFullYear();
-  // split fanfics vs books (for current year display in badge)
-  const booksOnly = books.filter(b=>b.format!=='fanfic');
-  const fanfics = books.filter(b=>b.format==='fanfic');
-  document.getElementById('statsTotal').textContent = booksOnly.length;
+  // split fanfics vs libros (for current year display in badge)
+  const librosOnly = libros.filter(b=>b.format!=='fanfic');
+  const fanfics = libros.filter(b=>b.format==='fanfic');
+  document.getElementById('statsTotal').textContent = librosOnly.length;
   document.getElementById('statsFanfics').textContent = fanfics.length;
 
-  const total = books.length;
+  const total = libros.length;
   if (total === 0) {
     document.getElementById('statsAvg').textContent = '—';
     document.getElementById('statsSpicy').textContent = '—';
     return;
   }
-  const rated = books.filter(b=>b.rating>0);
+  const rated = libros.filter(b=>b.rating>0);
   const avg = rated.length ? (rated.reduce((a,b)=>a+b.rating,0)/rated.length).toFixed(1) : '—';
   document.getElementById('statsAvg').textContent = avg !== '—' ? '⭐'+avg : '—';
 
-  const spiced = books.filter(b=>b.spicy>0);
+  const spiced = libros.filter(b=>b.spicy>0);
   const avgSpicy = spiced.length ? (spiced.reduce((a,b)=>a+b.spicy,0)/spiced.length).toFixed(1) : '—';
   document.getElementById('statsSpicy').textContent = avgSpicy !== '—' ? avgSpicy+'🔥' : '—';
 }
@@ -1331,7 +1331,7 @@ function renderChilis(spicy) {
 function renderBooks() {
   const grid = document.getElementById('bookGrid');
   const empty = document.getElementById('emptyState');
-  let filtered = books;
+  let filtered = libros;
   if (currentFilter==='5') filtered=books.filter(b=>b.rating===5);
   else if (currentFilter==='4') filtered=books.filter(b=>b.rating>=4);
   else if (currentFilter==='spicy5') filtered=books.filter(b=>b.spicy===5);
@@ -1341,7 +1341,7 @@ function renderBooks() {
     filtered=books.filter(b=>(b.tropes||[]).includes(key));
   }
 
-  // Sort by start date oldest to newest; books with no date go to end
+  // Sort by start date oldest to newest; libros with no date go to end
   filtered = [...filtered].sort((a,b)=>{
     const da = a.dateStart || a.dateEnd || a.added || '';
     const db = b.dateStart || b.dateEnd || b.added || '';
@@ -1421,7 +1421,7 @@ function renderShelf() {
   const empty=document.getElementById('emptyShelf');
 
   // Filter by selected year, sort newest to oldest
-  let yearBooks = books.filter(b => {
+  let yearBooks = libros.filter(b => {
     const d = b.dateEnd || b.dateStart || b.added;
     return d && new Date(d).getFullYear() === shelfYear;
   });
@@ -1435,8 +1435,8 @@ function renderShelf() {
   if(yearBooks.length===0){
     el.innerHTML='';
     empty.style.display='block';
-    empty.querySelector('.empty-title').textContent='No books for '+shelfYear;
-    empty.querySelector('.empty-sub').textContent='Add books with dates to see them here.';
+    empty.querySelector('.empty-title').textContent='Sin libros en '+shelfYear;
+    empty.querySelector('.empty-sub').textContent='Agrega libros con fechas para verlos aquí.';
     return;
   }
   empty.style.display='none';
@@ -1456,7 +1456,7 @@ function renderShelf() {
       </div>`;
     }).join('');
     return `<div class="wall-bg">
-      <div class="shelf-label">Shelf ${ri+1}</div>
+      <div class="shelf-label">Estante ${ri+1}</div>
       <div class="shelf-books">${spines}</div>
       <div class="shelf-plank"></div>
     </div>`;
@@ -1464,7 +1464,7 @@ function renderShelf() {
 
   // Async update spine colors from cover images
   yearBooks.forEach((b, i) => {
-    const realIdx = books.indexOf(b);
+    const realIdx = libros.indexOf(b);
     if (!b.coverImage) return;
     getSpineColors(b, realIdx).then(colors => {
       const el2 = document.getElementById('spine-'+realIdx);
@@ -1538,16 +1538,16 @@ function renderWrapped() {
   document.getElementById('wrappedYear').textContent = wrappedYear;
   document.getElementById('wrappedYearBig').textContent = wrappedYear;
 
-  // Filter books for selected year
-  const yearBooks = books.filter(b => {
+  // Filter libros for selected year
+  const yearBooks = libros.filter(b => {
     const d = b.dateEnd || b.dateStart || b.added;
     return d && new Date(d).getFullYear() === wrappedYear;
   });
 
-  const booksOnly = yearBooks.filter(b=>b.format!=='fanfic');
+  const librosOnly = yearBooks.filter(b=>b.format!=='fanfic');
   const fanfics = yearBooks.filter(b=>b.format==='fanfic');
 
-  document.getElementById('wrappedCount').textContent = booksOnly.length;
+  document.getElementById('wrappedCount').textContent = librosOnly.length;
   document.getElementById('wrappedFanficCount').textContent = fanfics.length;
 
   const rated=yearBooks.filter(b=>b.rating>0);
@@ -1566,14 +1566,14 @@ function renderWrapped() {
   const goal = loadGoal(wrappedYear);
   const goalInput = document.getElementById('goalInput');
   goalInput.value = goal || '';
-  const totalRead = booksOnly.length;
+  const totalRead = librosOnly.length;
   if (goal > 0) {
     document.getElementById('goalBarWrap').style.display='block';
     document.getElementById('goalEmpty').style.display='none';
     const pct = Math.min(Math.round(totalRead/goal*100), 100);
     document.getElementById('goalBar').style.width = pct+'%';
     document.getElementById('goalPct').textContent = pct+'%';
-    document.getElementById('goalProgressText').textContent = totalRead+' of '+goal+' books';
+    document.getElementById('goalProgressText').textContent = totalRead+' of '+goal+' libros';
   } else {
     document.getElementById('goalBarWrap').style.display='none';
     document.getElementById('goalEmpty').style.display='block';
@@ -1585,7 +1585,7 @@ function renderWrapped() {
   const sorted=Object.entries(tCounts).sort((a,b)=>b[1]-a[1]).slice(0,6);
   const max=sorted.length?sorted[0][1]:1;
   const barsEl=document.getElementById('tropeChartBars');
-  if(!sorted.length){barsEl.innerHTML='<div style="font-size:13px;color:var(--muted);text-align:center;padding:16px 0;">No data for '+wrappedYear+' yet!</div>';return;}
+  if(!sorted.length){barsEl.innerHTML='<div style="font-size:13px;color:var(--muted);text-align:center;padding:16px 0;">Sin datos para '+wrappedYear+' ¡todavía!</div>';return;}
   barsEl.innerHTML=sorted.map(([k,v])=>`
     <div class="trope-bar-row">
       <div class="trope-bar-label">${TROPES_MAP[k]||k}</div>
@@ -1777,9 +1777,9 @@ function saveBook() {
   };
   if(editingIdx>=0){
     const existing=books[editingIdx];
-    books[editingIdx]={...existing,...bookData};
+    libros[editingIdx]={...existing,...bookData};
   } else {
-    books.unshift({id:Date.now(),...bookData,added:new Date().toISOString()});
+    libros.unshift({id:Date.now(),...bookData,added:new Date().toISOString()});
   }
   saveBooks();
   closeAddModal();
@@ -1993,7 +1993,7 @@ function openDetail(idx) {
       const stars=r.rating?'&#11088;'.repeat(r.rating):'No rating';
       const fires=r.spicy?'&#128293;'.repeat(r.spicy):'';
       const dates=(r.dateStart||r.dateEnd)?'&#128197; '+(r.dateStart?fmt(r.dateStart):'?')+' &rarr; '+(r.dateEnd?fmt(r.dateEnd):'In progress'):'';
-      return '<div class="reread-entry"><div class="reread-num">Read #'+(ri+2)+'</div>'+(dates?'<div class="reread-dates">'+dates+'</div>':'')+'<div class="reread-ratings"><span style="color:var(--gold)">'+stars+'</span>'+(fires?'<span>'+fires+'</span>':'')+'</div></div>';
+      return '<div class="reread-entry"><div class="reread-num">Lectura #'+(ri+2)+'</div>'+(dates?'<div class="reread-dates">'+dates+'</div>':'')+'<div class="reread-ratings"><span style="color:var(--gold)">'+stars+'</span>'+(fires?'<span>'+fires+'</span>':'')+'</div></div>';
     }).join('');
   } else { rereadsWrap.style.display='none'; }
 
@@ -2001,7 +2001,7 @@ function openDetail(idx) {
 }
 
 function deleteBook(idx) {
-  books.splice(idx,1);
+  libros.splice(idx,1);
   saveBooks();
   document.getElementById('detailModal').classList.remove('open');
   renderAll();
@@ -2012,7 +2012,7 @@ document.getElementById('detailModal').addEventListener('click',function(e){if(e
 document.getElementById('rereadModal').addEventListener('click',function(e){if(e.target===this)closeRereadModal();});
 
 function exportBooks() {
-  const data = { books, exportedAt: new Date().toISOString(), version: 'mi-biblioteca-libros-v2' };
+  const data = { libros, exportedAt: new Date().toISOString(), version: 'mi-biblioteca-libros-v2' };
   const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -2033,13 +2033,13 @@ function importBooks(event) {
       const data = JSON.parse(e.target.result);
       const imported = data.books || data;
       if (!Array.isArray(imported)) throw new Error('Invalid file');
-      // Merge: keep existing books, add any from backup that aren't already there
+      // Merge: keep existing libros, add any from backup that aren't already there
       const existingIds = new Set(books.map(b => b.id));
       const newBooks = imported.filter(b => !existingIds.has(b.id));
-      books = [...books, ...newBooks];
+      libros = [...books, ...newBooks];
       saveBooks();
       renderAll();
-      document.getElementById('restoreMsg').innerHTML = '<span style="color:var(--sage)">✅ Restored ' + imported.length + ' books!</span>';
+      document.getElementById('restoreMsg').innerHTML = '<span style="color:var(--sage)">✅ Restored ' + imported.length + ' libros!</span>';
       document.getElementById('restoreFileInput').value = '';
     } catch(err) {
       document.getElementById('restoreMsg').innerHTML = '<span style="color:#C62828">❌ Invalid backup file</span>';
@@ -2051,7 +2051,7 @@ function importBooks(event) {
 // Backup reminder toast
 let backupReminderShown = false;
 function showBackupReminder() {
-  // Only show once per session, after adding/editing books
+  // Only show once per session, after adding/editing libros
   if (backupReminderShown) return;
   backupReminderShown = true;
   const toast = document.createElement('div');
